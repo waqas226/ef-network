@@ -8,14 +8,14 @@
          <title>NLK</title>
         <link href="dist/logo.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-        <meta name="keywords" content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
         <meta name="author" content="LEFT4CODE">
           <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{asset('assets/dist/css/app.css')}}" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
@@ -42,27 +42,20 @@
                         </a>
                     </li>
                 <li>
-                        <a href="category" class="menu <?php if($pagename=="category")echo 'menu--active'; ?>">
-                            <div class="menu__icon"> <i data-feather="file"></i> </div>
-                            <div class="menu__title"> Category </div>
+                        <a href="videos" class="menu <?php if($pagename=="videos")echo 'menu--active'; ?>">
+                            <div class="menu__icon"> <i data-feather="video"></i> </div>
+                            <div class="menu__title"> Video Section </div>
                         </a>
                     </li>
                     
                     
                     <li>
-                        <a href="products" class="menu <?php if($pagename=="products")echo 'menu--active'; ?>">
+                        <a href="articles" class="menu <?php if($pagename=="articles")echo 'menu--active'; ?>">
                             <div class="menu__icon"> <i data-feather="layout"></i> </div>
-                            <div class="menu__title"> Products </div>
+                            <div class="menu__title"> Articles </div>
                         </a>
                     </li>
-                    
-                     <li>
-                        <a href="moto" class="menu <?php if($pagename=="moto")echo 'menu--active'; ?>">
-                            <div class="menu__icon"> <i data-feather="plus-square"></i> </div>
-                            <div class="menu__title"> Add Moto </div>
-                        </a>
-                    </li>
-                   
+                
                   
                     
             </ul>
@@ -90,25 +83,19 @@
                         </a>
                     </li>
                      <li>
-                        <a href="category" class="side-menu <?php if($pagename=="category")echo 'side-menu--active'; ?>">
-                            <div class="side-menu__icon"> <i data-feather="file"></i> </div>
-                            <div class="side-menu__title"> Category </div>
+                        <a href="videos" class="side-menu <?php if($pagename=="videos")echo 'side-menu--active'; ?>">
+                            <div class="side-menu__icon"> <i data-feather="video"></i> </div>
+                            <div class="side-menu__title"> Video Section </div>
                         </a>
                     </li>
                     
                    <li>
-                        <a href="products" class="side-menu <?php if($pagename=="products")echo 'side-menu--active'; ?>">
+                        <a href="articles" class="side-menu <?php if($pagename=="articles")echo 'side-menu--active'; ?>">
                             <div class="side-menu__icon"> <i data-feather="layout"></i> </div>
-                            <div class="side-menu__title"> Products </div>
+                            <div class="side-menu__title"> Articles </div>
                         </a>
                     </li>
-                     <li>
-                        <a href="moto" class="side-menu <?php if($pagename=="moto")echo 'side-menu--active'; ?>">
-                            <div class="side-menu__icon"> <i data-feather="plus-square"></i> </div>
-                            <div class="side-menu__title"> Add Moto </div>
-                        </a>
-                    </li>
-                    
+                   
                  
                 </ul>
             </nav>

@@ -6,8 +6,8 @@
         <meta charset="utf-8">
         <link href="{{asset('assets/dist/logo.png')}}" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-        <meta name="keywords" content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="description" content="Code Coy">
+        <meta name="keywords" content="Code Coy">
         <meta name="author" content="LEFT4CODE">
         <title>Login - NLK Admin</title>
         <!-- BEGIN: CSS Assets-->
@@ -44,16 +44,13 @@
                         </h2>
                         <div class="intro-x mt-2 text-gray-500 xl:hidden text-center">A few more clicks to sign in to your account.</div>
                         <div class="intro-x mt-8">
-                        @if ($errors->any())
-                        @foreach ($errors->all() as $error)
-                            <span style="color: red; display:block; margin-bottom:2px">
-                            {{ $error }};
-                            </span>
-                            @endforeach
+                            @if(session('error'))
+                        <span class="text-theme-6 mb-2">{{session('error')}}</span>
                             @endif
-                    
-                            <input type="text" name="username" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username">
+                            <input type="text" name="username" value="{{old('username')}}" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Username">
+                            <label class="text-theme-6">@error('username'){{$message}}@enderror</label>
                             <input type="password" name="password" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Password">
+                            <label class="text-theme-6">@error('password'){{$message}}@enderror</label>
                         </div>
                         <div class="intro-x flex text-gray-700 dark:text-gray-600 text-xs sm:text-sm mt-4">
                            

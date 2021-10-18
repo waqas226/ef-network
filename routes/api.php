@@ -15,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    $validated = $request->validate([
+        'username' => 'required',
+        'password' => 'required',
+    ]);
     return $request->user();
 });

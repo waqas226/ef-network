@@ -15,7 +15,7 @@ $pagetitle="Dashboard | ";
                 <div class="grid grid-cols-12 gap-6">
                     <div class="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6">
                         <!-- BEGIN: General Report -->
-                        <div class="col-span-12 mt-8">
+                        <div class="col-span-12 mt-8 hidden">
                             <div class="intro-y flex items-center h-10">
                                 <h2 class="text-lg font-medium truncate mr-5">
                                     General Report
@@ -59,13 +59,16 @@ $pagetitle="Dashboard | ";
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
-                        
+                                <!-- new section-->
+                       
+                        @include('layouts.addpoll')
+                        @include('layouts.pollsection')
                        
                     </div>
                    
                 </div>
-            
+                
+              
 @include('layouts.footer')

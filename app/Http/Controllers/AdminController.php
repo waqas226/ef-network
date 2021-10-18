@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    
     public function index(){
         return view('index');
     }
@@ -16,10 +17,24 @@ class AdminController extends Controller
         ]);
     
     if($request->username=='admin' AND $request->password=='admin123'){
+        $request->session()->put('username',$request->username);
+        $request->session()->put('login','ok');
        return redirect('index');
     }else{
-        echo 'not match';
+        
+        $request->session()->flash('error', 'Wrong Credentails !!');
+     return redirect('login');      
     }
 
+}
+
+public function users(){
+    return view('users');
+}
+public function videos(){
+    return view('videos');
+}
+public function articles(){
+    return view('articles');
 }
 }
